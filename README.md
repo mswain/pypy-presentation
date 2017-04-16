@@ -16,7 +16,7 @@ python fibonacci.py 32
 
 * Run demo w/ pypy
 ```
-$ pyenv shell pypy2-5.7.1
-$ python fibonacci.py 32
+pyenv shell pypy2-5.7.1
+python fibonacci.py 32
 32 fibonacci number is: 2178309 found in 0.117313s
 ```
