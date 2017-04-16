@@ -1,0 +1,39 @@
+* Presentation
+** History
+*** Python is an interpreted language
+**** Write high-level statements like "print 5"
+**** Python - Parses, lexes, and compiling down to VM bytecode
+**** bytecode is interpreted / executed by the Python Virtual Machine
+*** Neat concept in CS called JIT which takes this pattern further
+**** further compile interpreted bytecode into machine language
+**** if the code gets run again without any "complications" this can be extremely efficent
+**** Great for long-running processes where code is executed frequently
+**** Not so great for short lived processes where code runs once, since the extra compilation takes time
+*** 2002 a developer named Armin Rigo started a project called "Psyco" which aimed to bring JIT to python
+*** PyPy is the followup to this
+** Features / problems
+*** JIT
+*** Pluggable Memory Manager!
+*** Compatible p2, p3
+*** Doesn't work too well w/ native extensions
+** When does it make sense? I've succesfully got 100x speedup!
+*** Long running code
+*** Lots of numeric computation, lots of loops
+*** Single thread, or at least multiprocess... 
+**** GIL still exists, but there is the experimental STM!
+**** Pluggable GC means can be more COW friendly w/o MP
+* Demo
+** The classic fibonacci sequence
+*** What is Fibonacci?
+**** Sequence of integers where each nubmer is the sum of the two preceeding numbers:
+***** Seed values F(0) = 0, F(1) = 1
+***** F(N) = F(N-1) + F(N - 2)
+***** 1, 1, 2, 3, 5, 8 ... F(N - 1) + F(N - 2)
+*** Solving in code w/ recursion
+**** Function F takes argument n
+**** if n == 0, return 0
+**** if n == 1, return 1
+**** else return F(n-1) + F(n-2)
+*** Demo (MacOS Sierra + Pyenv)
+**** Code is here: https://github.com/mswain/pypy-presentation
+**** README.md describes how to install / run demo
