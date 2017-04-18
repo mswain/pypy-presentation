@@ -2,8 +2,8 @@ import argparse
 from datetime import datetime
 
 def get_args():
-    parser = argparse.ArgumentParser(description='Calculate Nth Fibbonaci Number.')
-    parser.add_argument("n", type=int, help="Nth Fib number")
+    parser = argparse.ArgumentParser(description='Calculate Nth Fibonacci Number.')
+    parser.add_argument("n", type=int, help="Nth Fibonacci number")
     return parser.parse_args()
 
 def F(n):
@@ -16,5 +16,5 @@ start_time = datetime.now()
 solution = F(args.n)
 end_time = datetime.now()
 
-print "{0} fibbonaci number is: {1} found in {2}s ".format(args.n, solution, (end_time-start_time).total_seconds())
+print "{0} fibonacci number is: {1} found in {2}s ".format(args.n, solution, (end_time-start_time).total_seconds())
 
